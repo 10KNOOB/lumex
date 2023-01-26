@@ -1,17 +1,19 @@
+import { Routes, Route } from "react-router-dom";
+
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
-import WeHaveApp from "./components/wehave/WeHave";
-import Products from "./components/products/Products";
-import OurCustomer from "./components/ourCustomer/OurCustomer";
+import Home from "./components/home/Home";
+import Contact from "./components/contactus/ContactUs";
 import Footer from "./components/footer/Footer";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <WeHaveApp />
-      <Products />
-      <OurCustomer />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
+      </Routes>
       <Footer />
     </div>
   );

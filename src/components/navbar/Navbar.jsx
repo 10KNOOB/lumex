@@ -6,8 +6,8 @@ import {
   AiOutlineClose,
   AiOutlineMenu,
 } from "react-icons/ai";
+import { NavLink } from "react-router-dom";
 
-import Hero from "../hero/Hero.jsx";
 import TopRight from "../../image/top-right.png";
 import LeftBottom from "../../image/bottom-left.png";
 
@@ -35,14 +35,29 @@ const Navbar = () => {
 
       <div className=" bg-[#D9D9D9] z-10">
         <div className="container flex justify-between h-[45px] px-2 md:px-0">
-          <ul className="md:flex justify-center items-center gap-x-10 text-[14px] text-[#292853] hidden ">
-            <li className="hover:border-b-2 border-[#EB038D] py-3">Home</li>
-            <li className="hover:border-b-2 border-[#EB038D] py-3">About Us</li>
-            <li className="hover:border-b-2 border-[#EB038D] py-3">Product</li>
-            <li className="hover:border-b-2 border-[#EB038D] py-3">
+          <nav className="md:flex justify-center items-center gap-x-10 text-[14px] text-[#292853] hidden ">
+            <NavLink to="/" className="hover:border-b-2 border-[#EB038D] py-3">
+              Home
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className="hover:border-b-2 border-[#EB038D] py-3"
+            >
+              About us
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className="hover:border-b-2 border-[#EB038D] py-3"
+            >
+              Product
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className="hover:border-b-2 border-[#EB038D] py-3"
+            >
               Contact Us
-            </li>
-          </ul>
+            </NavLink>
+          </nav>
 
           <div
             className={
@@ -51,7 +66,7 @@ const Navbar = () => {
                 : "fixed h-screen left-[-100%] w-[80%] top-0 ease-in duration-500 backdrop-blur-lg z-40"
             }
           >
-            <ul className="px-5 py-10 text-[14px] text-[#292853]">
+            <nav className="px-5 py-10 text-[14px] text-[#292853] flex flex-col">
               <div className=" font-bipplo text-4xl text-[#00ADF1] py-2">
                 <span>L</span>
                 <span className="text-[#EB038D]">U</span>
@@ -59,17 +74,32 @@ const Navbar = () => {
                 <span className="text-[#EB038D]">E</span>
                 <span>X</span>
               </div>
-              <li className="hover:border-b-2 border-[#EB038D] py-3">Home</li>
-              <li className="hover:border-b-2 border-[#EB038D] py-3">
+              <NavLink
+                to="/"
+                className="hover:border-b-2 border-[#EB038D] py-3"
+              >
+                Home
+              </NavLink>
+              <NavLink
+                to="/contact"
+                className="hover:border-b-2 border-[#EB038D] py-3"
+              >
                 About Us
-              </li>
-              <li className="hover:border-b-2 border-[#EB038D] py-3">
+              </NavLink>
+              <NavLink
+                to="/contact"
+                className="hover:border-b-2 border-[#EB038D] py-3"
+              >
                 Product
-              </li>
-              <li className="hover:border-b-2 border-[#EB038D] py-3">
-                Contact Us
-              </li>
-            </ul>
+              </NavLink>
+
+              <NavLink
+                to="/contact"
+                className="hover:border-b-2 border-[#EB038D] py-3"
+              >
+                Contact
+              </NavLink>
+            </nav>
           </div>
 
           <div className="flex justify-center items-center gap-x-5 text-[14px] text-[#292853]">
@@ -95,7 +125,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <Hero />
     </div>
   );
 };
