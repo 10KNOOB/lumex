@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "bipplo";
+  src: url("./components/fonts/bipplo.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #bfc7df;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+@layer components {
+  .container {
+    @apply max-w-[1200px] mx-auto;
+  }
+}
